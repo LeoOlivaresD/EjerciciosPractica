@@ -1,18 +1,16 @@
 package Pruebas;
 
 import Plantillas.yugioh.CardData;
-import Plantillas.yugioh.CartasYuGiOh;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class YuGiOh {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
-        int opcion, cardLimit;
-        String respuesta, cardName, cardType;
+        int opcion;
+        String respuesta;
+
+        //instancia de la clase CardData para poder usar todos los metodos que ocuparemos en nuestro menu.
         CardData cardData = new CardData();
         do {
             System.out.println("*****************************************");
@@ -25,29 +23,67 @@ public class YuGiOh {
                     "4: Find LimitCard\n" +
                     "5: Show card list\n" +
                     "6: Delete Card by name\n" +
-                    "7: Salir");
+                    "7: Ordenar lista por Nombre de cartas \n" +
+                    "8: Ordenar lista por id de cartas\n" +
+                    "9: Ordenar lista por tipo de cartas\n" +
+                    "10: Salir");
             opcion = sc.nextInt();
 
-            switch (opcion){
+            switch (opcion) {
                 case 1:
+                    //add cards
                     cardData.agregarCarta();
                     break;
                 case 2:
-                    System.out.println("Ingrese el nombre de la carta que desea buscar");
-                    cardName = sc.nextLine();
-
+                    //find by Name
+                    cardData.findByName();
                     break;
-                    case 3:
-                        //find for type
-                        break;
+                case 3:
+                    //find by Type
+                    cardData.findByType();
+                    break;
                 case 4:
-                    //find limitCard
+                    //find by limit Card
+                    cardData.findByLimmit();
                     break;
                 case 5:
-                    //mostrar lista de cartas
+                    //show list cards
                     cardData.showList();
+                    break;
+                case 6:
+                    //delete by Name
+                    cardData.deleteByName();
+                    break;
+                case 7:
+                    // mostrar lista ordenada por nombre
+                    cardData.sortByName();
+                    break;
+                case 8:
+                    //mostrar lista ordenada por id de cartas
+                    cardData.sortById();
+                    break;
+                case 9:
+                    //mostrar lista de cartas ordenadas por tipo
+                    cardData.sortByType();
+                    break;
+                case 10:
+                    System.out.println("Desea salir del programa ? (responda \"si, /no \") ");
+                    sc.nextLine();
+                    respuesta = sc.nextLine();
+                    if (respuesta.equalsIgnoreCase("si")){
+                        salir=true;
+                    }else {
+                        System.out.println("Volviendo al menu principal..\n" +
+                                "Presione Enter para continuar");
+                        sc.nextLine();
+                    }
+                    break;
+                default:
+                    System.out.println("La opcion ingresada no corresponde\n" +
+                            "Presione la tecla \"Enter\" para continuar");
+                    sc.nextLine();
             }
-        }while (!salir);
+        } while (!salir);
 
     }
 }

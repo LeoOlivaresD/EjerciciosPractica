@@ -3,7 +3,7 @@ package Plantillas.yugioh;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CartasYuGiOh {
+public class CartasYuGiOh implements Comparable<CartasYuGiOh> {
     private Integer idCard;
     private String name;
     private String effect;
@@ -114,5 +114,10 @@ public class CartasYuGiOh {
                 ", limitCard=" + limitCard +
                 ", type='" + type + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(CartasYuGiOh cartas) {
+        return this.name.compareTo(cartas.getName());
     }
 }

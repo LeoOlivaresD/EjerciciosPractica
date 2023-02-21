@@ -109,10 +109,7 @@ public class CartasYuGiOh {
 
     @Override
     public String toString() {
-        return "CartasYuGiOh{" +
-                "idCard=" + idCard +
-                ", name='" + name + '\'' +
-                ", effect='" + effect + '\'' +
+        return "CartasYuGiOh{" + "idCard=" + idCard + ", name='" + name + '\'' + ", effect='" + effect + '\'' +
                 ", rarityCard='" + rarityCard + '\'' +
                 ", limitCard=" + limitCard +
                 ", type='" + type + '\'' +

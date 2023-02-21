@@ -3,14 +3,16 @@ package Pruebas;
 import Plantillas.yugioh.CardData;
 import Plantillas.yugioh.CartasYuGiOh;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class YuGiOh {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
-        int opcion;
-        String respuesta;
+        int opcion, cardLimit;
+        String respuesta, cardName, cardType;
         CardData cardData = new CardData();
         do {
             System.out.println("*****************************************");
@@ -28,23 +30,23 @@ public class YuGiOh {
 
             switch (opcion){
                 case 1:
-                    CartasYuGiOh cartas = new CartasYuGiOh();
-                    cartas.setIdCard(cartas.getIdCard());
-                    cartas.setName(cartas.getName());
-                    cartas.setType(cartas.getType());
-                    cartas.setEffect(cartas.getEffect());
-                    cartas.setRarityCard(cartas.getRarityCard());
-                    cartas.setLimitCard(cartas.getLimitCard());
-                    cardData.registrarCarta(cartas);
+                    cardData.agregarCarta();
                     break;
-
                 case 2:
-                    System.out.println("Listando por nombre...");
-                    cardData.listarPorNombre();
-                    System.out.println("Terminando listado");
+                    System.out.println("Ingrese el nombre de la carta que desea buscar");
+                    cardName = sc.nextLine();
+
                     break;
+                    case 3:
+                        //find for type
+                        break;
+                case 4:
+                    //find limitCard
+                    break;
+                case 5:
+                    //mostrar lista de cartas
+                    cardData.showList();
             }
-            
         }while (!salir);
 
     }

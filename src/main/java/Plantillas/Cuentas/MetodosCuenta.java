@@ -1,4 +1,4 @@
-package Pruebas;
+package Plantillas.Cuentas;
 
 import java.util.ArrayList;
 import java.util.Collections;

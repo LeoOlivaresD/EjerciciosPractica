@@ -1,12 +1,10 @@
 package Plantillas.yugioh;
 
-import Pruebas.YuGiOh;
-
 import java.util.*;
 
 //Usare esta clase para crear todos los metodos de la clase principal
 public class CardData extends CartasYuGiOh{
-    //Lista de cartas
+    //Pruebas.list.animales.Lista de cartas
     List<CartasYuGiOh> listaDeCartas = new ArrayList<>();
     CartasYuGiOh cartas = new CartasYuGiOh();
 

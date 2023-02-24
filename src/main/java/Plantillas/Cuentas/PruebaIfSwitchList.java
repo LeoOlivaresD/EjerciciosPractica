@@ -1,8 +1,6 @@
-package Pruebas;
+package Plantillas.Cuentas;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class PruebaIfSwitchList {
     public static void main(String[] args) {

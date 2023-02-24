@@ -1,4 +1,4 @@
-package Plantillas;
+package Pruebas.list.animales;
 
 public class Animales implements Comparable <Animales> {
     private Integer id;

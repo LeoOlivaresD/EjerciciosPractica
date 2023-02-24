@@ -1,3 +1,5 @@
+package Pruebas.if_switch.basicos;
+
 import java.util.Scanner;
 
 public class IfSwitchDoWhile {

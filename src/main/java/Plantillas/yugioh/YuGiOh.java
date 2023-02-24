@@ -1,4 +1,4 @@
-package Pruebas;
+package Plantillas.yugioh;
 
 import Plantillas.yugioh.CardData;
 import java.util.Scanner;

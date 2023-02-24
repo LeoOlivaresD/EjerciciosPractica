@@ -1,4 +1,6 @@
-import Plantillas.Animales;
+package Pruebas.list_poo.animales;
+
+import Pruebas.list.animales.Animales;
 
 import java.util.ArrayList;
 import java.util.Collections;

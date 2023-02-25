@@ -16,7 +16,7 @@ public class TableroConNumerosPar {
                     numPar = numPar +1; //si no es par le sumamos uno al valor y se guarda
                     n[i][j] = numPar;
                 }
-                numPar= numPar + 1; //al salir del if sumamos 1 mas al numero
+                numPar= numPar + 1; //al salir del if sumamos 1 mas al numero, para evitar que entre con el mismo valor al bucle
             }
         }
         //Imprimiremos el Arreglo para visualizar el resultado
